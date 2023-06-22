@@ -9,12 +9,12 @@ spec:
   selector:
     matchLabels:
       run: data-platform-api-invoice-document-cancels-rmq-kube
-      app: ORDERS
+      app: INVOICE_DOCUMENT
   template:
     metadata:
       labels:
         run: data-platform-api-invoice-document-cancels-rmq-kube
-        app: ORDERS
+        app: INVOICE_DOCUMENT
     spec:
       hostname: data-platform-api-invoice-document-cancels-rmq-kube
       containers:

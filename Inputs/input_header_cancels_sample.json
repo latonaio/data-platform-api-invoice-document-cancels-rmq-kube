@@ -5,21 +5,16 @@
 	"filepath": "/var/lib/aion/Data/rededge_sdc/abcdef.json",
 	"api_status_code": 200,
 	"runtime_session_id": "boi9ar543dg91ipdnspi099u231280ab0v8af0ew",
-	"business_partner": 102,
-	"service_label": "FUNCTION_INVOICE_DOCUMENT_CANCELS",
+	"business_partner": 101,
+	"service_label": "INVOICE_DOCUMENT",
 	"api_type": "cancels",
 	"InvoiceDocument": {
 		"InvoiceDocument": 90000001,
-		"Item": [
-			{
-				"InvoiceDocumentItem": 1,
-				"IsCancelled": false
-			}
-		]
+		"IsCancelled": true
 	},
 	"api_schema": "DPFMInvoiceDocumentCancels",
 	"accepter": [
-		"Item"
+		"Header"
 	],
 	"deleted": false
 }
