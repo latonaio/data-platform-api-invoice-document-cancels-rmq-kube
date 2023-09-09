@@ -25,22 +25,19 @@ type SDC struct {
 }
 
 type Message struct {
-	Header *Header `json:"Header"`
-	Item   *[]Item `json:"Item"`
+	Header *[]Header	`json:"Header"`
+	Item   *[]Item 		`json:"Item"`
 }
 
 type Header struct {
-	InvoiceDocument     int     `json:"InvoiceDocument"`
-	HeaderInvoiceStatus *string `json:"HeaderInvoiceStatus"`
-	IsCancelled         *bool   `json:"IsCancelled"`
-	HeaderIsDeleted     *bool   `json:"HeaderIsDeleted"`
-	Items               *[]Item `json:"Items"`
+	InvoiceDocument     	int     `json:"InvoiceDocument"`
+	HeaderBillingConfStatus *string `json:"HeaderBillingConfStatus"`
+	IsCancelled         	*bool   `json:"IsCancelled"`
 }
 
 type Item struct {
-	InvoiceDocument     int     `json:"InvoiceDocument"`
-	InvoiceDocumentItem int     `json:"InvoiceDocumentItem"`
-	ItemInvoiceStatus   *string `json:"ItemInvoiceStatus"`
-	IsCancelled         *bool   `json:"IsCancelled"`
-	ItemIsDeleted       *bool   `json:"ItemIsDeleted"`
+	InvoiceDocument     	int     `json:"InvoiceDocument"`
+	InvoiceDocumentItem 	int     `json:"InvoiceDocumentItem"`
+	ItemBillingConfStatus   *string `json:"ItemBillingConfStatus"`
+	IsCancelled         	*bool   `json:"IsCancelled"`
 }

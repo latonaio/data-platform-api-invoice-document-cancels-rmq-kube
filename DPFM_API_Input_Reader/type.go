@@ -63,22 +63,22 @@ type SDC struct {
 	BusinessPartner  int             `json:"business_partner"`
 	ServiceLabel     string          `json:"service_label"`
 	APIType          string          `json:"api_type"`
-	InvoiceDocument  InvoiceDocument `json:"InvoiceDocument"`
+	Header		     Header 		 `json:"InvoiceDocument"`
 	APISchema        string          `json:"api_schema"`
 	Accepter         []string        `json:"accepter"`
 	Deleted          bool            `json:"deleted"`
 }
-type InvoiceDocument struct {
-	InvoiceDocument int    `json:"InvoiceDocument"`
-	IsCancelled     *bool  `json:"IsCancelled"`
-	Item            []Item `json:"Item"`
+
+type Header struct {
+	InvoiceDocument     	int     `json:"InvoiceDocument"`
+	HeaderBillingConfStatus *string `json:"HeaderBillingConfStatus"`
+	IsCancelled         	*bool   `json:"IsCancelled"`
+	Item            		[]Item `json:"Item"`
 }
+
 type Item struct {
-	InvoiceDocumentItem int                  `json:"InvoiceDocumentItem"`
-	IsCancelled         *bool                `json:"IsCancelled"`
-	ItemSchedulingLine  []ItemSchedulingLine `json:"ItemSchedulingLine"`
-}
-type ItemSchedulingLine struct {
-	ScheduleLine int   `json:"ScheduleLine"`
-	IsCancelled  *bool `json:"IsCancelled"`
+	InvoiceDocument     	int     `json:"InvoiceDocument"`
+	InvoiceDocumentItem 	int     `json:"InvoiceDocumentItem"`
+	ItemBillingConfStatus   *string `json:"ItemBillingConfStatus"`
+	IsCancelled         	*bool   `json:"IsCancelled"`
 }
